@@ -14,14 +14,40 @@ func main() {
 	for i := 0; i < N; i++ {
 		fmt.Scan(&nums[i])
 	}
+
 	// N := 200000
 	// nums := make([]int, N)
 	// for i := 0; i < N; i++ {
 	// 	nums[i] = i
 	// }
+
 	mpp := NewMaxPairwiseProduct(nums)
 	fmt.Println(mpp.getMaxPairwiseProduct())
 	fmt.Println(mpp.getMaxPairwiseProductFast())
+
+	// for {
+
+	// 	N := rand.Intn(10) + 2
+	// 	fmt.Println(N)
+	// 	fmt.Println("...")
+
+	// 	nums := make([]int, N)
+	// 	for i := 0; i < N; i++ {
+	// 		nums[i] = rand.Intn(100000) + 1
+	// 		fmt.Println(nums[i])
+	// 	}
+
+	// 	mpp := NewMaxPairwiseProduct(nums)
+	// 	res1, res2 := mpp.getMaxPairwiseProduct(), mpp.getMaxPairwiseProductFast()
+
+	// 	if res1 != res2 {
+	// 		fmt.Println("Wrong---------------------------------")
+	// 		break
+	// 	} else {
+	// 		fmt.Println("OK - ", res1, " - ", res2)
+	// 	}
+
+	// }
 
 }
 
