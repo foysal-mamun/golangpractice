@@ -8,6 +8,7 @@ func main() {
 	// fmt.Println(aplusb())
 
 	// MaxPairwiseProduct
+
 	N := 0
 	fmt.Scan(&N)
 	nums := make([]int, N)
@@ -27,14 +28,14 @@ func main() {
 
 	// for {
 
-	// 	N := rand.Intn(10) + 2
+	// 	N := rand.Intn(1000) + 2
 	// 	fmt.Println(N)
 	// 	fmt.Println("...")
 
 	// 	nums := make([]int, N)
 	// 	for i := 0; i < N; i++ {
 	// 		nums[i] = rand.Intn(100000) + 1
-	// 		fmt.Println(nums[i])
+	// 		fmt.Print(nums[i], ' ')
 	// 	}
 
 	// 	mpp := NewMaxPairwiseProduct(nums)
