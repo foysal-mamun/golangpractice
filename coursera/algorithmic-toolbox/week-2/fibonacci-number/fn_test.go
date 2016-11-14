@@ -2,6 +2,7 @@ package fibonacci_number
 
 import (
 	"math/big"
+	"strconv"
 	"testing"
 )
 
@@ -34,6 +35,23 @@ func TestBySpaceOptimize(t *testing.T) {
 	f := BySpaceOptimize(100)
 	if c.Cmp(f) != 0 {
 		t.Errorf("Wrong resutl %d, Correct result %d", f, c)
+	}
+}
+
+func TestLastDigitOfFibByDinamic(t *testing.T) {
+	for i := 0; i < 100; i++ {
+
+		c := big.NewInt(0)
+		c.SetString(strconv.Itoa(i), 10)
+		f1 := BySpaceOptimize(i).String()
+		i1, _ := strconv.Atoi(string(f1[len(f1)-1]))
+
+		f2 := LastDigitOfFibByDinamic(i)
+
+		if i1 != f2 {
+			t.Errorf("Wrong asn for %d; Main Fic: %d; last Digit: %d\n", i, f1, f2)
+		}
+
 	}
 }
 
